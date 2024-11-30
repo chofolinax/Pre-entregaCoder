@@ -1,0 +1,204 @@
+* { margin:0;
+    padding:0;
+    text-decoration: none;}
+
+header {background-color: white;
+margin-top: 0px;
+top: 30px;}
+
+body {background-color:#F98AB3;}
+
+
+.titulo-inicio{   font-family: "Sacramento", cursive;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 0px;}
+
+    .imagenes-menu {
+        display: flex;     
+        flex-wrap: wrap;         
+        justify-content: center;     
+        align-items: center;         
+        text-align: center;
+        margin-top: 20px;}
+
+    .imagenes-menu a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Amatic SC", sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        position: relative;}
+    
+    .imagen-elemento {
+        width: auto;
+        max-width: 450px;
+        height:auto;
+        margin-left: 8px;
+        box-shadow: 5px 8px 12px #F53D81;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out; opacity: 0.3s ease-in-out;
+    }
+    
+    .imagenes-menu a:hover .imagen-elemento {
+        
+        transform: scale(1.1);
+        opacity: 0.6; 
+    }
+    
+    
+    .menu-inicio1, .menu-inicio2, .menu-inicio3, .menu-inicio4 {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F98AB3;
+        color: white;
+        padding: 10px; }
+
+    
+    .imagenes-menu a:hover .menu-inicio1 {
+        display: flex;}
+    .imagenes-menu a:hover .menu-inicio2 {
+        display: flex;
+    }
+    .imagenes-menu a:hover .menu-inicio3 {
+        display: flex;
+    }
+    .imagenes-menu a:hover .menu-inicio4 {
+        display: flex;
+    }
+
+
+.parte-inferior {
+    display: block;
+    justify-content: space-between;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20%;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+a {color: #333333;}
+
+
+
+form{
+    display: flex;
+    font-family: "Sacramento", cursive;
+    font-size: 25px;
+    max-width: 30%;
+    margin-top: 100px;
+    margin-left: 20px;
+    font-weight: bolder;
+    border: none;
+    color: #333333;
+    }
+
+fieldset { 
+    border: none;
+    padding: 20px;
+}
+
+input[type="submit"] {
+    margin-top: 20px; 
+    margin-left:90%; }
+
+
+
+.subtitulo { 
+    text-align: center;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar ul {
+    display: flex;           
+    list-style-type: none;   
+    padding: 0;              
+    margin: 0;  
+    justify-content: space-evenly;
+    width: 100%;}
+
+.navbar ul li {
+    margin-right: 20px; }
+
+.navbar ul li a {
+    text-decoration: none;   
+    color: black;            
+    font-size: 30px;
+    font-family: "Amatic SC", sans-serif;      
+    padding: 10px;   }
+
+
+    .contenedor-accesorios img {
+        width: 85%; 
+        height: 97%; 
+        object-fit: cover; 
+        object-position: center;
+    }
+
+
+
+    .custom-img {
+        width: 90%;
+        height: 97%;
+        object-fit: cover;}
+
+
+
+.footer {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 480px) {
+    form {
+        max-width: 95%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    fieldset { 
+        height: auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .parte-inferior {
+        display: flex;
+    }
+    
+    form {
+        display: flex;
+        font-size: 30px;
+        width: 700px;
+        height: 500px;
+        margin-top: 100px;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
