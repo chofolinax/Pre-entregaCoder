@@ -84,14 +84,46 @@ body {background-color: $color1;}
     
 .redes {
     display: flex;
-    justify-content: space-evenly;
     font-size: 40px;
-    margin-top: 60px;
-    margin-left: 20px;
-    margin-right: 20%;
-    margin-bottom: 40px;
     gap: 30px;
+    flex-direction: column;
+    align-items: center;
     }
+
+
+    .iconos-redes {
+        height: 45px;
+        justify-content: end;
+        text-decoration: none;
+    }
+
+    .p-redes {
+        height: 50px;
+        color: #333333;
+        font-family: "Amatic SC";
+        font-weight: bold;
+        margin-right: 40px;
+        margin-top: 90px;
+    }
+    
+    .medios-de-pago {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        color: #333333;
+        gap: 10px; 
+        font-family: "Amatic SC";
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    .sitio{ 
+        font-family: "Amatic SC";
+        font-size: 40px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
     
 a {color: $color2;}
     
@@ -99,10 +131,10 @@ a {color: $color2;}
     
 form{
     display: flex;
+    flex-direction: column;
     font-family: $fuente;
     font-size: 25px;
-    max-width: 30%;
-    margin-top: 100px;
+    max-width: 20%;
     margin-left: 20px;
     font-weight: bolder;
     border: none;
@@ -110,7 +142,6 @@ form{
 
     fieldset { 
         border: none;
-        padding: 20px;
         }
 
         input[type="submit"] {
@@ -118,7 +149,39 @@ form{
             margin-left:90%; }
         }
 
-
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 20px; 
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;  
+        }
+        
+        .newsletter h2{
+            color: $color2;
+            text-align: center;
+            margin: 0;
+            padding: 0;}
+        
+        
+        .newsletter-form {
+            display: flex;                   
+            justify-content: center;         
+            align-items: center;             
+            gap: 10px;                        
+            width: 80%; 
+            margin-top: 0px; 
+            margin: 10px auto;
+            padding: 0; }
+        
+        .newsletter-form input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 90%;                     
+            outline: none;
+        }
 
 .subtitulo { 
     text-align: center;
@@ -156,10 +219,41 @@ form{
     height: 97%; 
     object-fit: cover; 
     object-position: center;
-    }
-    
-    
-    
+    margin-top: 5px;
+    box-shadow: 5px 8px 12px $color3;
+    border-radius: 5px;
+}
+
+.contenedor-perfumes img {
+    width: 85%;
+    height: 97%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 5px;
+    box-shadow: 5px 8px 12px $color3;
+    border-radius: 5px;
+}
+
+.contenedor-skincare img {
+    width: 85%;
+    height: 97%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 5px;
+    box-shadow: 5px 8px 12px $color3;
+    border-radius: 5px;
+}
+
+.contenedor-maquillaje img {
+    width: 85%;
+    height: 97%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 5px;
+    box-shadow: 5px 8px 12px $color3;
+    border-radius: 5px;
+}
+
 .custom-img {
     width: 90%;
     height: 97%;
@@ -169,12 +263,27 @@ form{
     
 .footer {
     font-family: $fuente2;
+    color: $color2;
     font-size: 25px;
     text-align: center;
     margin-top: 30px;
     }
     
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) and (max-width: 1150px) {
+        .imagenes-menu a {
+        width: 90%;
+        text-decoration: none;
+        height: auto;
+        flex-direction: column;
+    }
+        .menu-inicio1, .menu-inicio2, .menu-inicio3, .menu-inicio4 {
+        display: flex;
+        position: static; 
+        transform: none; 
+        color: $color2;
+        font-size: 40px; 
+        padding: 10px;
+    }
     form {
         max-width: 95%;
         height: auto;
@@ -192,9 +301,32 @@ form{
         width: 100%; 
         padding: 10px;
         }
+        .redes {
+        max-width: 50%;
+        margin-left: 50px;
+        }
+        .p-redes {
+            font-size: 40px;
+            margin-left: 20px;
+        }
+        .sitio {
+            font-size: 30px;
+        }
     }
+    @media only screen and (min-width: 1366px) {
+        .imagenes-menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;  
+        justify-items: center;  
+        }
     
-@media only screen and (min-width: 1280px) {
+        .imagen-elemento {
+        max-width: 100%; 
+        height: auto;
+        }
+    }
+@media only screen and (min-width: 1250px) {
     .parte-inferior {
         display: flex;
         }

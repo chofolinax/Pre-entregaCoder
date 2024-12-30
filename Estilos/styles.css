@@ -6,9 +6,10 @@ header {
 
 body {
   background-color: #F98AB3;
+  overflow-x: hidden;
 }
 
-.animate__animated {
+.titulo-inicio {
   font-family: "Sacramento";
   font-size: 90px;
   text-align: center;
@@ -34,6 +35,7 @@ body {
   font-size: 60px;
   font-weight: bold;
   position: relative;
+  box-sizing: border-box;
 }
 
 .imagen-elemento {
@@ -80,20 +82,53 @@ body {
 }
 
 .parte-inferior {
-  display: block;
+  display: flex;
   justify-content: space-between;
 }
 
 .redes {
   display: flex;
-  justify-content: space-evenly;
   font-size: 40px;
-  margin-top: 60px;
-  margin-left: 20px;
-  margin-right: 20%;
-  margin-bottom: 40px;
   gap: 30px;
+  flex-direction: column;
+  align-items: center;
 }
+
+.iconos-redes {
+  height: 45px;
+  justify-content: end;
+  text-decoration: none;
+}
+
+.p-redes {
+  height: 50px;
+  color: #333333;
+  font-family: "Amatic SC";
+  font-weight: bold;
+  margin-right: 40px;
+  margin-top: 90px;
+}
+
+
+
+.medios-de-pago {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  color: #333333;
+  gap: 10px; 
+  font-family: "Amatic SC";
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.sitio{ 
+  font-family: "Amatic SC";
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 a {
   color: #333333;
@@ -101,22 +136,57 @@ a {
 
 form {
   display: flex;
-  font-family: "Sacramento";
+  flex-direction: column;
+  font-family:"Amatic SC";
   font-size: 25px;
-  max-width: 30%;
-  margin-top: 100px;
+  max-width: 20%;
   margin-left: 20px;
   font-weight: bolder;
   border: none;
   color: #333333;
 }
+
 form fieldset {
   border: none;
-  padding: 20px;
 }
+
 form input[type=submit] {
   margin-top: 20px;
   margin-left: 90%;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 20px; 
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;  
+}
+
+.newsletter h2{
+  color: #333333;
+  text-align: center;
+  margin: 0;
+  padding: 0;}
+
+
+.newsletter-form {
+  display: flex;                   
+  justify-content: center;         
+  align-items: center;             
+  gap: 10px;                        
+  width: 80%; 
+  margin-top: 0px; 
+  margin: 10px auto;
+  padding: 0; }
+
+.newsletter-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;                     
+  outline: none;
 }
 
 .subtitulo {
@@ -142,37 +212,84 @@ form input[type=submit] {
 .navbar ul li a {
   text-decoration: none;
   color: #333333;
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Amatic SC";
   padding: 10px;
+  font-weight: bolder;
 }
 
 .contenedor-accesorios img {
   width: 85%;
   height: 97%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 5px;
+  box-shadow: 5px 8px 12px #F53D81;
+  border-radius: 5px;
+}
+
+
+.contenedor-perfumes img {
+  width: 85%;
+  height: 97%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 5px;
+  box-shadow: 5px 8px 12px #F53D81;
+  border-radius: 5px;
+}
+
+.contenedor-skincare img {
+  width: 85%;
+  height: 97%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 5px;
+  box-shadow: 5px 8px 12px #F53D81;
+  border-radius: 5px;
+}
+
+.contenedor-maquillaje img {
+  width: 85%;
+  height: 97%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 5px;
+  box-shadow: 5px 8px 12px #F53D81;
+  border-radius: 5px;
 }
 
 .custom-img {
   width: 90%;
   height: 97%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .footer {
   font-family: "Amatic SC";
+  color: #333333;
   font-size: 25px;
   text-align: center;
   margin-top: 30px;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 1366px) {
+@media only screen and (min-width: 480px) and (max-width: 1150px) {
+  .imagenes-menu a {
+    width: 90%;
+    text-decoration: none;
+    height: auto;
+    flex-direction: column;
+  }
+  .menu-inicio1, .menu-inicio2, .menu-inicio3, .menu-inicio4 {
+    display: flex;
+    position: static; 
+    transform: none; 
+    color: #333333;
+    font-size: 40px; 
+    padding: 10px;
+  }
   form {
-    max-width: 90%;
+    max-width: 70%;
     height: auto;
     margin-top: 100px
   }
@@ -186,8 +303,32 @@ form input[type=submit] {
     width: 100%;
     padding: 10px;
   }
+  .redes {
+    max-width: 50%;
+    margin-left: 50px;
+  }
+  .p-redes {
+    font-size: 40px;
+    margin-left: 20px;
+  }
+  .sitio {
+    font-size: 30px;
+  }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1366px) {
+  .imagenes-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;  
+    justify-items: center;  
+  }
+
+  .imagen-elemento {
+    max-width: 100%; 
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1250px) {
   .parte-inferior {
     display: flex;
   }
